@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $comics_album = config('comics');
+    return view('comhp', compact('comics_album'));
+})->name('comhp');
+
+Route::get('/{num}', 'DCController@show')->name('comic');;
+
+
+

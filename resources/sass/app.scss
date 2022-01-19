@@ -1,1 +1,246 @@
-//
+@use "bootstrap";
+/* GLOBAL */
+
+.waterfall_menu {
+    margin-left: 3px;
+}
+.bg_a {
+    background-color: #0282f9;
+}
+
+.bg_gr {
+    background-color: #55ba59;
+}
+
+.bg_g {
+    background-color: #f6f6f6;
+}
+
+.footer_text_c {
+    color: #797979;
+}
+
+.text_da {
+    color: #003f5e;
+}
+
+.bt_1g {
+    border-top: 1px solid #e3e3e3;
+}
+
+.bb_1g {
+    border-bottom: 1px solid #e3e3e3;
+}
+.w_435r {
+    width: 435px;
+    text-align: right;
+}
+
+.w_435 {
+    width: 435px;
+}
+
+.pl-200 {
+    padding-left: 200px;
+}
+
+/* HEADER */
+#header_container {
+    .extra_info {
+        color: white;
+        gap: 50px;
+        p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+    }
+    .navbar_control {
+        nav a {
+            text-decoration: none;
+            color: #464649;
+        }
+        .header_logo img {
+            height: 110px;
+            padding: 15px 0;
+        }
+        input {
+            border: 0;
+            border-bottom: 2px solid #0282f9;
+            text-align: right;
+            color: #464649;
+        }
+    }
+    .jumbotron_image {
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+        object-position: 100% 0;
+    }
+}
+
+/* MAIN */
+#main_container {
+    .current_series {
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        top: -20px;
+        left: 250px;
+        background-color: #0282f9;
+        color: white;
+        h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+    }
+    .bg_d {
+        background-color: #1c1c1c;
+        position: relative;
+    }
+    .card_container {
+        text-decoration: none;
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+    .load {
+        font-size: 0.8rem;
+        background-color: #0282f9;
+        color: white;
+        padding: 10px 50px;
+        border: 0;
+        margin: 20px auto 15px auto;
+        display: block;
+    }
+    .generic_container {
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .generic_bg {
+        background-color: #0282f9;
+    }
+
+    .generic_content {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 0.9rem;
+        padding-right: 60px;
+        img {
+            height: 40px;
+        }
+        p {
+            padding-left: 10px;
+            margin: 0;
+        }
+    }
+}
+/* COMIC */
+.cover_format {
+    color: white;
+    border: 1px solid white;
+    top: -260px;
+    span {
+        left: 0;
+        background-color: #00a9d9;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: #00a9d9;
+    }
+}
+.price_av {
+    border-bottom: 1px solid;
+}
+
+.av {
+    width: calc(636px - 139px);
+    border-right: 1px solid black;
+}
+
+.adv_title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: right;
+    width: 300px;
+}
+/* CARD */
+.card_container {
+    img {
+        vertical-align: middle;
+        width: 155px;
+        height: 176px;
+        object-fit: cover;
+        object-position: 100% 0;
+    }
+}
+
+/* Footer */
+#footer_container {
+    .link_container {
+        background-image: url(../img/footer-bg.jpg);
+        height: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h4 {
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            li {
+                font-weight: bold;
+            }
+        }
+    }
+    .logo_bg {
+        background-image: url(../img/dc-logo-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-size: 540px;
+    }
+    .cta_container {
+        background-color: #303030;
+        z-index: 2;
+        position: relative;
+        .button_container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            button {
+                border: 2px solid #0282f9;
+                padding: 7px;
+                color: white;
+                background-color: transparent;
+            }
+        }
+        .social_container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            p {
+                color: #0282f9;
+                padding-right: 10px;
+            }
+            img {
+                padding: 7px;
+                width: 40px;
+            }
+        }
+    }
+}
