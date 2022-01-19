@@ -13,26 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $comics_album = config('comics');
-    return view('comhp', compact('comics_album'));
-})->name('comhp');
+Route::get('/', 'ComicController@index')->name('comic.index');
+/* 
+Route::get('', 'ComicController@create')->name('comic.create');
 
-Route::get('/{num}', 'ComicController@index')->name('admin.posts.index');
+Route::post('', 'ComicController@store')->name('comic.store'); */
 
+Route::get('/{num}', 'ComicController@show')->name('comic.show');
 
-Route::get('admin/posts', 'Admin\PostController@index')->name('admin.posts.index');
+/* Route::get('', 'ComicController@edit')->name('comic.edit');
 
-Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
+Route::put('', 'ComicController@update')->name('comic.update');
 
-Route::post('posts', 'Admin\PostController@store')->name('admin.posts.store');
-
-Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
-
-Route::get('posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
-
-Route::put('posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
-
-Route::delete('posts/{post}', 'Admin\PostController@destroy')->name('admin.posts.destroy');
-
+Route::delete('', 'ComicController@destroy')->name('comic.destroy');
+ */
 

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -12,13 +11,10 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($num)
+    public function index()
     {
-    $dett_com = config('comics');
-    $date_format = $dett_com[$num]['sale_date'];
-    $date_format = date("M d y");
-    
-    return view('dett_comics',compact('num','dett_com','date_format'));
+          $comics_album = Comic::all();
+    return view('comhp', compact('comics_album'));
     }
 
     /**
@@ -48,9 +44,13 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show($num)
     {
-        //
+    $dett_com = config('comics');
+    $date_format = $dett_com[$num]['sale_date'];
+    $date_format = date("M d y");
+    
+    return view('dett_comics',compact('num','dett_com','date_format'));
     }
 
     /**

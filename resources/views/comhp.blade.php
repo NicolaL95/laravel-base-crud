@@ -9,7 +9,7 @@
     <div class="row pt-5">
 @foreach($comics_album as $key=>$value)
 <div class="col-2">
-    <a class="card_container" href="{{ route('comic',['num' => $key])}}">
+    <a class="card_container" href="{{ route('comic.show',['num' => $key])}}">
         <img src="{{$value['thumb']}}" alt="Album image">
         <p>{{$value['series']}}</p>
     </a>
