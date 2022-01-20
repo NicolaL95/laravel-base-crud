@@ -51,13 +51,14 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show($num)
+    public function show(Comic $comic)
+
     {
-    $dett_com = config('comics');
-    $date_format = $dett_com[$num]['sale_date'];
-    $date_format = date("M d y");
+  
+    $date_format = $comic->sale_date;
+    $date_format = date("M d y"); 
     
-    return view('dett_comics',compact('num','dett_com','date_format'));
+    return view('dett_comics',compact('comic','date_format'));
     }
 
     /**
@@ -68,7 +69,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+         return view('comic_edit', compact('comic'));
     }
 
     /**

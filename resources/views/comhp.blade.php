@@ -7,12 +7,13 @@
       </div>
 <div class="container">
     <div class="row pt-5">
-@foreach($comics_album as $key=>$value)
+@foreach($comics_album as $comic)
 <div class="col-2">
-    <a class="card_container" href="{{ route('comic.show',['num' => $key])}}">
-        <img src="{{$value['thumb']}}" alt="Album image">
-        <p>{{$value['series']}}</p>
+    <a class="card_container" href="{{ route('comic.show',$comic -> id)}}">
+        <img src="{{$comic['thumb']}}" alt="Album image">
+        <p>{{$comic['series']}}</p>
     </a>
+    <a href="{{ route('comic.edit',$comic->id)}}">Edit</a>
 </div>
 @endforeach
     </div>

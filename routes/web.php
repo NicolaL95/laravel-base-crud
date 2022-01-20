@@ -21,12 +21,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('', 'ComicController@store')->name('comic.store'); 
 
-Route::get('/{num}', 'ComicController@show')->name('comic.show');
+Route::get('/{comic}', 'ComicController@show')->name('comic.show');
 
-/*  Route::get('', 'ComicController@edit')->name('comic.edit');
+  Route::get('/{comic}/edit', 'ComicController@edit')->name('comic.edit');
 
 Route::put('', 'ComicController@update')->name('comic.update');
 
 Route::delete('', 'ComicController@destroy')->name('comic.destroy'); 
-  */
+
  
