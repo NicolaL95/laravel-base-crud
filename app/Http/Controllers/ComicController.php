@@ -24,7 +24,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comic_create');
     }
 
     /**
@@ -35,7 +35,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+  $validated_comic = $request->validate([
+            'title' => 'required|unique:comics',
+            'description' => 'nullable'
+        ]);
+
+        Comic::create($validated_comic);
+        return redirect()->route('comic.index');
     }
 
     /**

@@ -13,18 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ComicController@index')->name('comic.index');
-/* 
-Route::get('', 'ComicController@create')->name('comic.create');
 
-Route::post('', 'ComicController@store')->name('comic.store'); */
+
+  Route::get('/', 'ComicController@index')->name('comic.index');
+
+  Route::get('/create', 'ComicController@create')->name('comic.create');
+
+Route::post('', 'ComicController@store')->name('comic.store'); 
 
 Route::get('/{num}', 'ComicController@show')->name('comic.show');
 
-/* Route::get('', 'ComicController@edit')->name('comic.edit');
+/*  Route::get('', 'ComicController@edit')->name('comic.edit');
 
 Route::put('', 'ComicController@update')->name('comic.update');
 
-Route::delete('', 'ComicController@destroy')->name('comic.destroy');
- */
-
+Route::delete('', 'ComicController@destroy')->name('comic.destroy'); 
+  */
+ 

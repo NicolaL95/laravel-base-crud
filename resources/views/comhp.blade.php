@@ -18,7 +18,7 @@
     </div>
 
 
-      <button class="load">LOAD MORE</button>
+      <a class="load" href="{{ route('comic.create')}}">ADD NEW COMIC</a>
     </div>
     <div class="generic_bg">
       <div class="generic_container">

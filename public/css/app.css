@@ -12297,6 +12297,8 @@ fieldset:disabled .btn {
   border: 0;
   margin: 20px auto 15px auto;
   display: block;
+  width: 205px;
+  text-decoration: none;
 }
 
 #main_container .generic_container {

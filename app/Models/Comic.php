@@ -8,4 +8,5 @@ class Comic extends Model
 {
     //
     protected $table = "comics"; 
+    protected $fillable = ['title', 'description'];
 }
