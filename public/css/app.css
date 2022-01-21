@@ -12220,6 +12220,12 @@ fieldset:disabled .btn {
   padding-left: 200px;
 }
 
+.button_container {
+  display: flex;
+  width: 155px;
+  justify-content: space-around;
+}
+
 /* HEADER */
 
 #header_container .extra_info {

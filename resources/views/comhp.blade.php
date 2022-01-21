@@ -11,14 +11,36 @@
 <div class="col-2">
     <a class="card_container" href="{{ route('comic.show',$comic -> id)}}">
         <img src="{{$comic['thumb']}}" alt="Album image">
-        <p>{{$comic['series']}}</p>
+        <p class='mb-1'>{{$comic['series']}}</p>
     </a>
-    <a href="{{ route('comic.edit',$comic->id)}}">Edit</a>
-    <form action="{{route('comic.update',$comic->id)}}" method="post">
+    <div class="button_container mb-2">
+      <a class="btn btn-primary" href="{{ route('comic.edit',$comic->id)}}" role="button">Edit</a>
+    <button button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePopup">Elimina</button>
+    </div>
+    
+    <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="deletePopup" tabindex="-1" aria-labelledby="deletePopupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deletePopupLabel">Conferma eliminazione fumetto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Vuoi davvero eliminare questo fumetto?
+      </div>
+      <div class="modal-footer">;
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+        <form action="{{route('comic.update',$comic->id)}}" method="post">
       @csrf
       @method('DELETE')
-      <button button type="submit" class="btn btn-success">Elimina</button>
+       <button type="submit" class="btn btn-danger">Elimina</button>
     </form>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 @endforeach
     </div>
