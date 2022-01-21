@@ -5,12 +5,12 @@
 <div class="container">
     <h1>update a new Comic</h1>
 
-    <form action="{{route('comic.store',$comic->id)}}" method="post">
+    <form action="{{route('comic.update',$comic->id)}}" method="post">
         @csrf
          @method('PUT')
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type your title here" aria-describedby="titleHelper" value="{{ old('title') }}">
+            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type your title here" aria-describedby="titleHelper" value="{{ $comic->title }}">
             <small id="titleHelper" class="text-muted">Type the comic's title!</small>
             @error('title')
             <div class="alert alert-danger">{{ $message }}</div>

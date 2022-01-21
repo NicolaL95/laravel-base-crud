@@ -81,7 +81,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+         $validated_comic = $request->validate([
+            'title' => 'required|unique:comics',
+            'description' => 'nullable'
+        ]);
+        $comic->update($validated_comic);
+
+        return redirect()->route('comic.index')->with('message', 'Fumetto modificato con successo!');
+
+
     }
 
     /**
@@ -92,6 +100,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+         return redirect()->route('comic.index')->with('message', 'Fumetto eliminato con successo!');
+
     }
 }
