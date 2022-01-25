@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1>Create a new Comic</h1>
-
+    @include('partials.errors');
     <form action="{{route('comic.store')}}" method="post">
         @csrf
         <div class="mb-3">

@@ -11,7 +11,7 @@
         <div class="navbar_control d-flex align-items-center justify-content-between">
     @include('partials.logo')
     <nav class="d-flex align-items-center justify-content-between w-100 px-5 fw-bold">
-        <a href="">CHARACTER</a>
+        <a href="{{route('characters.index')}}">CHARACTER</a>
         <a href=>COMICS</a>
        <a href="">MOVIES</a>
         <a href="">TV</a>
